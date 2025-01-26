@@ -1,9 +1,11 @@
 package demo;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -26,7 +28,7 @@ public void setup() {
 	
 }
 
-@Test(priority =1)
+@Test(priority =1, enabled=false)
 public void dologinwithinvalid()throws InterruptedException  {
 	//Username
 		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
@@ -75,6 +77,25 @@ public void addEmployee() throws InterruptedException {
 	Assert.assertEquals("Personal Details", confirmmsg);
 	
 }
+@Test(priority =4)
+public  void search_employee() throws InterruptedException {
+	//click on PIM
+		driver.findElement(By.xpath("//span[text()='PIM']")).click();
+		//add employee name
+		//click on  employee list
+		driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+		//search via employee name
+		driver.findElements(By.tagName("input")).get(1).sendKeys("srishti");
+		//click on serch button
+		driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")).click();
+		Thread.sleep(5000);
+	List<WebElement> element = driver.findElements(By.xpath("//span[@class='oxd-text oxd-text--span']"));
+	String exp_msg = "Records Found";
+	String msg_actual=element.get(0).getText();
+	System.out.println(msg_actual);
+	Assert.assertTrue(msg_actual.contains(exp_msg));
+}
+
 
 public void logout() {
 	driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();

@@ -6,8 +6,8 @@
       <class name="demo.OrangeHRM">
         <methods>
           <include name="setup"/>
-          <include name="dologinwithinvalid"/>
           <include name="tearDown"/>
+          <include name="search_employee"/>
         </methods>
       </class> <!-- demo.OrangeHRM -->
     </classes>
