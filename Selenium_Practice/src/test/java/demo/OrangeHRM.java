@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -77,6 +78,7 @@ public void addEmployee() throws InterruptedException {
 	Assert.assertEquals("Personal Details", confirmmsg);
 	
 }
+//Search employee by name
 @Test(priority =4)
 public  void search_employee() throws InterruptedException {
 	//click on PIM
@@ -94,6 +96,30 @@ public  void search_employee() throws InterruptedException {
 	String msg_actual=element.get(0).getText();
 	System.out.println(msg_actual);
 	Assert.assertTrue(msg_actual.contains(exp_msg));
+}
+//search employee by id
+@Test(priority =5)
+public void Search_employee_by_id() throws InterruptedException {
+	String empID ="0295";
+	String actual_msg ="";
+	//click on PIM
+			driver.findElement(By.xpath("//span[text()='PIM']")).click();
+			//click on  employee list
+			driver.findElement(By.xpath("//a[normalize-space()='Employee List']")).click();
+			//add employee id
+			driver.findElements(By.tagName("input")).get(2).sendKeys(empID);
+			//click on serch button
+			driver.findElement(By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")).click();
+			Thread.sleep(5000);
+			//to scroll down
+			JavascriptExecutor executer =(JavascriptExecutor) driver;
+			executer.executeScript("window,scrollBy(0,"+500+")");
+			
+			List<WebElement> rows =driver.findElements(By.xpath("//div[@role='row']"));
+			if(rows.size()>1) {
+			actual_msg=	driver.findElement(By.xpath("((//div[@role ='row'])[2]/div[@role='cell'])[2]")).getText();//xpath handling table
+			}
+			Assert.assertEquals(empID, actual_msg);
 }
 
 

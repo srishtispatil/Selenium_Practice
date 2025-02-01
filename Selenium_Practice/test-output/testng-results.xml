@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-26T13:25:51 IST" name="Default suite" finished-at="2025-01-26T13:26:25 IST" duration-ms="33559">
+  <suite started-at="2025-02-01T11:59:45 IST" name="Default suite" finished-at="2025-02-01T12:00:35 IST" duration-ms="49410">
     <groups>
     </groups>
-    <test started-at="2025-01-26T13:25:51 IST" name="Default test" finished-at="2025-01-26T13:26:25 IST" duration-ms="33559">
+    <test started-at="2025-02-01T11:59:45 IST" name="Default test" finished-at="2025-02-01T12:00:35 IST" duration-ms="49410">
       <class name="demo.OrangeHRM">
-        <test-method is-config="true" signature="setup()[pri:0, instance:demo.OrangeHRM@2e3967ea]" started-at="2025-01-26T13:25:51 IST" name="setup" finished-at="2025-01-26T13:25:56 IST" duration-ms="4499" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T11:59:45 IST" name="setup" finished-at="2025-02-01T11:59:54 IST" duration-ms="8341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTestwithvalid()[pri:2, instance:demo.OrangeHRM@2e3967ea]" started-at="2025-01-26T13:25:56 IST" name="loginTestwithvalid" finished-at="2025-01-26T13:25:58 IST" duration-ms="2296" status="PASS">
+        <test-method signature="loginTestwithvalid()[pri:2, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T11:59:54 IST" name="loginTestwithvalid" finished-at="2025-02-01T11:59:57 IST" duration-ms="2764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTestwithvalid -->
-        <test-method signature="addEmployee()[pri:3, instance:demo.OrangeHRM@2e3967ea]" started-at="2025-01-26T13:25:58 IST" name="addEmployee" finished-at="2025-01-26T13:26:11 IST" duration-ms="12867" status="PASS">
+        <test-method signature="addEmployee()[pri:3, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T11:59:57 IST" name="addEmployee" finished-at="2025-02-01T12:00:11 IST" duration-ms="14656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmployee -->
-        <test-method signature="search_employee()[pri:4, instance:demo.OrangeHRM@2e3967ea]" started-at="2025-01-26T13:26:11 IST" name="search_employee" finished-at="2025-01-26T13:26:18 IST" duration-ms="7303" status="PASS">
+        <test-method signature="search_employee()[pri:4, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T12:00:11 IST" name="search_employee" finished-at="2025-02-01T12:00:20 IST" duration-ms="8547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search_employee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.OrangeHRM@2e3967ea]" started-at="2025-01-26T13:26:18 IST" name="tearDown" finished-at="2025-01-26T13:26:25 IST" duration-ms="6564" status="PASS">
+        <test-method signature="Search_employee_by_id()[pri:5, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T12:00:20 IST" name="Search_employee_by_id" finished-at="2025-02-01T12:00:28 IST" duration-ms="8392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search_employee_by_id -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.OrangeHRM@70e9c95d]" started-at="2025-02-01T12:00:28 IST" name="tearDown" finished-at="2025-02-01T12:00:35 IST" duration-ms="6633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
